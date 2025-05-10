@@ -1,0 +1,99 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: #f0e6f6;
+    color: #5a3e66;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .invitation {
+    background: #fff;
+    max-width: 360px;
+    width: 100%;
+    height: 600px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    color: #77487d;
+    font-family: 'Segoe Script', cursive;
+    text-align: center;
+    margin-bottom: 0.2em;
+  }
+  
+  h2 {
+    color: #a07abf;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  
+  p {
+    color: #5a3e66;
+    text-align: center;
+    margin-bottom: 2em;
+    font-weight: normal;
+  }
+  
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .photos img {
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(119, 84, 141, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .photos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(153, 102, 204, 0.7);
+  }
+  
+  video {
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(119, 84, 141, 0.3);
+    outline: none;
+  }
+  
+  footer {
+    text-align: center;
+    font-style: italic;
+    color: #8a72a0;
+    margin-top: 1em;
+    user-select: none;
+  }
+  

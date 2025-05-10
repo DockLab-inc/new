@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Undangan Digital Ulang Tahun</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Palatino Linotype', Palatino, serif;
+      background: linear-gradient(135deg, #fef9f0, #d7e2eb);
+      color: #44515e;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 1.2rem 1rem;
+      -webkit-touch-callout: none;
+      user-select: none;
+    }
+
+    .invitation {
+      background: #ffffffcc;
+      max-width: 360px;
+      width: 100%;
+      height: 600px;
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(90, 96, 108, 0.15);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 32px 28px 42px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      user-select: text;
+    }
+
+    .invitation::-webkit-scrollbar {
+      width: 8px;
+    }
+    .invitation::-webkit-scrollbar-thumb {
+      background: #aabfca;
+      border-radius: 5px;
+      border: 2px solid #f6f9fc;
+    }
+    .invitation::-webkit-scrollbar-track {
+      background: #f0f5f9;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #6b7b8c;
+      text-shadow: 1px 1px 3px rgba(255 255 255 / 0.8);
+      margin-bottom: 0.2rem;
+    }
+
+    header h2 {
+      font-family: 'Georgia', serif;
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: #8f9fae;
+      font-style: italic;
+      margin-bottom: 0.9rem;
+      letter-spacing: 0.05em;
+    }
+
+    .message {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #5b626e;
+      padding: 0 14px;
+      text-align: center;
+      font-weight: 300;
+      user-select: text;
+    }
+
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(90px, 1fr));
+      gap: 14px;
+      justify-items: center;
+      padding: 0 14px;
+    }
+
+    .photo-gallery img {
+      border-radius: 16px;
+      width: 100%;
+      max-width: 100px;
+      object-fit: cover;
+      box-shadow: 0 0 14px rgba(145, 155, 168, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid #c9d6df;
+      cursor: pointer;
+      filter: drop-shadow(0 1px 3px rgba(100, 110, 125, 0.1));
+    }
+    .photo-gallery img:hover, .photo-gallery img:focus {
+      transform: scale(1.07);
+      border-color: #8ea2b8;
+      box-shadow: 0 7px 16px rgba(142, 162, 184, 0.5);
+      outline: none;
+    }
+
+    .video-section {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      align-items: center;
+      padding: 0 14px;
+    }
+
+    .video-section video {
+      border-radius: 20px;
+      max-width: 100%;
+      box-shadow: 0 6px 24px rgba(141, 150, 167, 0.3);
+      cursor: pointer;
+      outline-offset: 3px;
+      outline-color: #9badc6;
+      outline-style: solid;
+      outline-width: 0;
+      transition: outline-width 0.25s ease;
+    }
+    .video-section video:focus, .video-section video:hover {
+      outline-width: 5px;
+    }
+
+    .video-caption {
+      margin-top: 0;
+      font-size: 0.9rem;
+      color: #7a8291;
+      font-style: italic;
+      text-align: center;
+      user-select: text;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      font-style: italic;
+      color: #8d98a7;
+      user-select: none;
+      padding-top: 12px;
+    }
+
+    @media (max-width: 380px) {
+      header h1 {
+        font-size: 2.3rem;
+      }
+      header h2 {
+        font-size: 1.1rem;
+      }
+      .message {
+        font-size: 0.95rem;
+      }
+      .photo-gallery img {
+        max-width: 90px;
+      }
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <main class="invitation" role="main" aria-label="Undangan ulang tahun digital, gulir ke bawah untuk melihat konten">
+    <header>
+      <h1>Selamat Ulang Tahun</h1>
+      <h2>Momen Spesial untukmu</h2>
+    </header>
+
+    <section class="message" aria-label="Pesan ucapan ulang tahun">
+      <p>
+        Kami berdoa agar di hari ulang tahunmu ini,
+        kamu selalu dikelilingi oleh cinta, kebahagiaan, dan kedamaian.<br /><br />
+        Semoga setiap harimu dipenuhi dengan senyum dan momen-momen indah yang tak terlupakan.<br /><br />
+        Gulir ke bawah untuk menikmati kenangan dalam bentuk foto dan video.
+      </p>
+    </section>
+
+    <section class="photo-gallery" aria-label="Galeri foto kenangan">
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="Kue ulang tahun dengan lilin menyala" tabindex="0" />
+      <img src="https://images.unsplash.com/photo-1532634737-701cd2372f5f?auto=format&fit=crop&w=400&q=80" alt="Teman-teman merayakan dengan balon" tabindex="0" />
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=400&q=80" alt="Sekelompok teman bergembira" tabindex="0" />
+      <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=80" alt="Dekorasi ulang tahun cantik dengan cahaya" tabindex="0" />
+    </section>
+
+    <section class="video-section" aria-label="Video kenangan ulang tahun">
+      <video controls preload="metadata" aria-describedby="viddesc1" tabindex="0" muted>
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" />
+        Browser Anda tidak mendukung pemutaran video.
+      </video>
+      <p id="viddesc1" class="video-caption">Video bunga yang indah dan menenangkan untuk hari spesialmu.</p>
+
+      <video controls preload="metadata" aria-describedby="viddesc2" tabindex="0" muted>
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/bee.webm" type="video/webm" />
+        Browser Anda tidak mendukung pemutaran video.
+      </video>
+      <p id="viddesc2" class="video-caption">Video lebah yang damai terbang di taman berbunga.</p>
+    </section>
+
+    <footer>
+      Dibuat dengan cinta untuk hari istimewamu 💙
+    </footer>
+  </main>
+</body>
+</html>
+
